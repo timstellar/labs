@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 // Variant 20
 int main(int argc, char* argv[]) {
     int a{};
