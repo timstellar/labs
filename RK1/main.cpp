@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 
+// Variant 10
+
 int main(int argc, char* argv[]) {
     std::vector<int> numbers;
     int input{};
@@ -12,7 +14,7 @@ int main(int argc, char* argv[]) {
         }
         numbers.push_back(input);
     }
-    
+
     for (int i{}; i < 6; i++) {
         std::cout << numbers[i] << " ";
     }
