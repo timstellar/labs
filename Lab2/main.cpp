@@ -100,11 +100,12 @@ int main(int argc, char* argv[]) {
         std::cout << "Fourth condition is false" << std::endl;
     }
 
-    if ((std::abs(positionA.first - positionB.first) <= 2) || 
-        ((std::abs(positionA.second - positionB.second) == 1) && (std::abs(positionA.first - positionB.first) == 1))) {
-        std::cout << "Fifth condition is true" << std::endl;
-    } else {
-        std::cout << "Fifth condition is false" << std::endl;
+    if ((positionB.second - positionA.second <= 2 && positionA.first == positionB.first) ||
+        (std::abs(positionB.first - positionA.first) == 1 && positionB.second - positionA.second == 1)) {
+        std::cout << "Fourth condition is true" << std::endl;
+    }
+    else {
+        std::cout << "Fourth condition is false" << std::endl;
     }
 
     // Task 3
