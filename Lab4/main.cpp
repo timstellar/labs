@@ -88,9 +88,34 @@ int argmax(const std::vector<float>& vec) {
     if (vec.empty()) return -1;
     return std::distance(vec.begin(), std::max_element(vec.begin(), vec.end()));
 }
-
+void quicksort(std::vector<float>& vec, int left, int right) {
+    if (left < right) {
+        int i = left;
+        int j = right;
+        float pivot = vec[(left + right) / 2];
+        while (i <= j) {
+            while (vec[i] < pivot) {
+                i++;
+            }
+            while (vec[j] > pivot) {
+                j--;
+            }
+            if (i <= j) {
+                std::swap(vec[i], vec[j]);
+                i++;
+                j--;
+            }
+        }
+        quicksort(vec, left, j);
+        quicksort(vec, i, right);
+    }
+}
 void sort(std::vector<float>& vec) {
-    std::sort(vec.begin(), vec.end());
+    if (!vec.empty()) {
+        int left = 0;
+        int right = vec.size() - 1;
+        quicksort(vec, left, right);
+    }
 }
 
 std::string replace(const std::string& str, const std::string& old, const std::string& new_string) {
