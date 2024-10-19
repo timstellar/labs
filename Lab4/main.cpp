@@ -8,7 +8,6 @@
 float mean(const std::vector<float>&);
 std::pair<float, float> minMax(const std::vector<float>&);
 void sort(std::vector<float>&);
-// bool remove_first_negative_element(const std::vector<int>& vec, int& removed_element);
 bool remove_first_negative_element(std::vector<int>& vec, int& removed_element) {
     auto it = std::find_if(vec.begin(), vec.end(), [](int x) { return x < 0; });
     if (it != vec.end()) {
