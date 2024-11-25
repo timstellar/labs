@@ -1,0 +1,14 @@
+Group1
+Student1 2000
+Chemistry 3 Math 4 Physics 5 
+Student2 2001
+Chemistry 2 Math 5 Physics 4 
+Student3 2002
+Chemistry 4 Math 3 Physics 2 
+Group2
+Student4 2000
+Chemistry 3 Math 4 Physics 5 
+Student5 2001
+Chemistry 2 Math 5 Physics 4 
+Student6 2002
+Chemistry 4 Math 3 Physics 2 
