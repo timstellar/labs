@@ -2,8 +2,20 @@
 #include "../include/Calculator.hpp"
 
 int main() {
-    std::string exp = "(123 + 123) + (321 + 321) + 543";
-    Calculator calc(exp);
+    try {
+        std::string expression;
+        std::cout << "Enter an expression: ";
+        std::cin >> expression;
+        std::cout << std::endl;
 
+        Calculator calc(expression);
+        calc.checkExpression();
+        calc.solve();
+        std::cout << "Result: " << calc.getResult() << std::endl;
+    } catch (const std::exception& e) {
+        std::cerr << "Exception: " << e.what() << std::endl;
+    } catch (...) {
+        std::cerr << "Unknown exception occurred" << std::endl;
+    }
     return 0;
 }
