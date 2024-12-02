@@ -8,7 +8,7 @@ class Calculator {
     private:
         std::string expression;
         double result;
-
+        int x;
         int precendence(char op) {
             if (op == '+' || op == '-') {
                 return 1;
@@ -100,6 +100,6 @@ class Calculator {
     public:
         Calculator(const std::string& expression) : expression(expression), result(0) {};
         void checkExpression();
-        void solve(int x = 0);
+        void solve();
         double getResult();
 };

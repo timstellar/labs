@@ -11,7 +11,9 @@ int main() {
         Calculator calc(expression);
         calc.checkExpression();
         calc.solve();
+
         std::cout << "Result: " << calc.getResult() << std::endl;
+        
     } catch (const std::exception& e) {
         std::cerr << "Exception: " << e.what() << std::endl;
     } catch (...) {
