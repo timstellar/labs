@@ -5,10 +5,10 @@ int main() {
     try {
         std::string expression;
         std::cout << "Enter an expression: ";
-        std::cin >> expression;
+        // std::cin >> expression;
         std::cout << std::endl;
 
-        Calculator calc(expression);
+        Calculator calc("2+2*2");
         calc.checkExpression();
         calc.solve();
 

@@ -33,6 +33,7 @@ class Calculator {
             std::string token;
 
             while (iss >> token) {
+                
                 if (isdigit(token[0])) {
                     output.push_back(token);
                 } else if (token[0] == '(') {
